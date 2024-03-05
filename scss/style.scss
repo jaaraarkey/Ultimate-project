@@ -1,0 +1,270 @@
+@import "config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $primary-color;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 2rem auto;
+  max-width: 90rem;
+  height: 100vh;
+}
+
+.abstraction {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url(/img/abstraction-top-right.png),
+    url(/img/deco-circle.png), url(/img/deco-square.png);
+  background-position: 50rem -5rem, -3rem 10rem, 17rem 25rem;
+  position: absolute;
+}
+
+.logo {
+  font: 800 2rem/2rem "Barlow", sans-serif;
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+.logo span {
+  color: $primary-color;
+}
+
+header {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  color: white;
+  display: inline-flex;
+}
+
+section.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10rem auto;
+  h1 {
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+  h2 {
+    color: $accent-color;
+    text-transform: uppercase;
+  }
+  p {
+    max-width: 35%;
+    color: $primary-color;
+  }
+}
+
+section.main {
+  justify-content: space-around;
+  display: flex;
+  img {
+    object-position: fit;
+    max-width: 100%;
+  }
+  h2,
+  h3 {
+    color: $primary-color;
+  }
+  header {
+    i {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+}
+
+.cards-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cards-title {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 60%;
+  color: white;
+  p {
+    opacity: 0.5;
+  }
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+}
+
+.card-text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  text-wrap: wrap;
+  justify-content: center;
+  border-radius: inherit;
+  color: white;
+  border-radius: 0 0 1rem 1rem;
+
+  background: $cards-gradient;
+  p {
+    opacity: 0.5;
+  }
+}
+
+.footer {
+  padding: 5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  li {
+    margin: 0;
+    text-transform: capitalize;
+  }
+  .menu {
+    margin: 0;
+    width: fit-content;
+  }
+  .social {
+    justify-self: end;
+    i {
+      margin: 0 0.2rem;
+      padding: 1rem;
+      width: 3rem;
+      border-radius: 2rem;
+      text-align: center;
+      background: #6357f6;
+    }
+  }
+}
+.lower-footer {
+  // margin: 2rem;
+  padding: 4rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  ul {
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: right;
+
+    display: flex;
+  }
+}
+.copyright {
+  opacity: 0.5;
+}
+@media screen and (min-device-width: 481) {
+  .fa-bars {
+    display: none;
+  }
+}
+@media only screen and (max-device-width: 375px) {
+  header {
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+    .logo {
+      font-size: 110%;
+    }
+  }
+
+  header .logo {
+    font-size: 120%;
+  }
+
+  header i {
+    font-size: 2rem;
+    display: none;
+    color: aliceblue;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  section.hero {
+    margin: auto;
+    padding: 0 1rem;
+    p,
+    h1,
+    h2 {
+      min-width: 100%;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    justify-content: center;
+  }
+
+  section.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cards-title {
+    margin: 0 1rem;
+    max-width: 100%;
+    text-align: left;
+  }
+  .text-wrapper {
+    margin: 0 0;
+    margin-bottom: 2%;
+    padding: 0 1rem;
+  }
+  .cards-section {
+  }
+  .card {
+    margin-left: 1rem;
+    margin: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.5rem;
+  }
+  .footer {
+    padding: 1rem;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    .sosial {
+      justify-self: center;
+    }
+  }
+
+  .container {
+    padding: 2rem;
+  }
+}
